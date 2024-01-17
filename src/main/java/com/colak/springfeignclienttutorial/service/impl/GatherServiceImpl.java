@@ -1,7 +1,7 @@
 package com.colak.springfeignclienttutorial.service.impl;
 
 import com.colak.springfeignclienttutorial.feignclient.Service1Client;
-import com.colak.springfeignclienttutorial.feignclient.Service1NewClient;
+import com.colak.springfeignclienttutorial.feignclient.Service2Client;
 import com.colak.springfeignclienttutorial.feignclient.Service1Response;
 import com.colak.springfeignclienttutorial.service.GatherService;
 import lombok.RequiredArgsConstructor;
@@ -9,26 +9,34 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.net.URI;
-import java.net.URISyntaxException;
 
 @RequiredArgsConstructor
 @Service
 public class GatherServiceImpl implements GatherService {
 
     private final Service1Client service1Client;
-    private final Service1NewClient service1NewClient;
+    private final Service2Client service2Client;
 
     @Override
-    public String gather(int id) throws URISyntaxException {
-        ResponseEntity<Service1Response> response1 = service1Client.getQuote(id);
-        Service1Response service1Response1 = response1.getBody();
+    public String gather(int id) {
+        Service1Response service1Response1 = getService1Response(id);
         assert service1Response1 != null;
 
-        URI baseUrl = URI.create("http://localhost:8080/api/service1");
-        ResponseEntity<Service1Response> response2 = service1NewClient.getQuote(baseUrl,1);
-        Service1Response service1Response2 = response2.getBody();
+        Service1Response service1Response2 = getService2Response();
         assert service1Response2 != null;
 
         return service1Response1.getMsg() + " " + service1Response2.getMsg();
+    }
+
+
+    private Service1Response getService1Response(int id) {
+        ResponseEntity<Service1Response> response1 = service1Client.getQuote(id);
+        return response1.getBody();
+    }
+
+    private Service1Response getService2Response() {
+        URI baseUrl = URI.create("http://localhost:8080/api/service2");
+        ResponseEntity<Service1Response> response2 = service2Client.getQuote(baseUrl, 2);
+        return response2.getBody();
     }
 }
