@@ -1,4 +1,4 @@
-package com.colak.springfeignclienttutorial.controller.gather;
+package com.colak.springfeignclienttutorial.internaldemo.controller.gather;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

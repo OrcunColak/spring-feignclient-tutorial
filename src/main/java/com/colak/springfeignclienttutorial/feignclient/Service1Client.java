@@ -20,11 +20,8 @@ public interface Service1Client {
     ResponseEntity<Service1Response> getQuote(@PathVariable("id") int id);
 
     default ResponseEntity<Service1Response> service1FallbackMethod(int id, Throwable exception) {
-        log.error("Quote1 service is unavailable for id : {} exception message : {}", id, exception.getMessage());
-        throw new RuntimeException(exception.getMessage());
-
-//        Service1Response service1Response = new Service1Response();
-//        service1Response.setMsg("Service 1 default message");
-//        return ResponseEntity.ok(service1Response);
+        Service1Response service1Response = new Service1Response();
+        service1Response.setMsg("Service 1 default message");
+        return ResponseEntity.ok(service1Response);
     }
 }
