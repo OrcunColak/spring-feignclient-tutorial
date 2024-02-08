@@ -21,11 +21,13 @@ public class GatherController {
 
     private final Service1Client service1Client;
 
+    // http://localhost:8080/api/gather/getQuote/1
     @GetMapping(path = "getQuote/{id}")
     public String getQuote(@PathVariable("id") int id) throws URISyntaxException {
         return gatherService.gather(id);
     }
 
+    // http://localhost:8080/api/gather/getService1Quote/1
     @GetMapping(path = "getService1Quote/{id}")
     public String getService1Quote(@PathVariable("id") int id) {
         ResponseEntity<Service1Response> response = service1Client.getQuote(id);
