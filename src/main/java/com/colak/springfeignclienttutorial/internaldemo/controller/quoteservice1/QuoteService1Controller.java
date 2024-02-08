@@ -1,6 +1,6 @@
 package com.colak.springfeignclienttutorial.internaldemo.controller.quoteservice1;
 
-import com.colak.springfeignclienttutorial.feignclient.Service1Response;
+import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service1Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

@@ -1,4 +1,4 @@
-package com.colak.springfeignclienttutorial.feignclient.errordecoder;
+package com.colak.springfeignclienttutorial.internaldemo.feignclient.errordecoder;
 
 public class ExternalServiceException extends RuntimeException {
 

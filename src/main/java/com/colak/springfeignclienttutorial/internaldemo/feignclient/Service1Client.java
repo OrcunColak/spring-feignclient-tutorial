@@ -1,4 +1,4 @@
-package com.colak.springfeignclienttutorial.feignclient;
+package com.colak.springfeignclienttutorial.internaldemo.feignclient;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;

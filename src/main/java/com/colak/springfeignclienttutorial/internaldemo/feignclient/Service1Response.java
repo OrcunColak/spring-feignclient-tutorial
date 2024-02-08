@@ -1,4 +1,4 @@
-package com.colak.springfeignclienttutorial.feignclient;
+package com.colak.springfeignclienttutorial.internaldemo.feignclient;
 
 import lombok.Getter;
 import lombok.Setter;

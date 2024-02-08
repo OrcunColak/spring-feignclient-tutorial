@@ -1,6 +1,6 @@
-package com.colak.springfeignclienttutorial.feignclient.config;
+package com.colak.springfeignclienttutorial.internaldemo.feignclient.config;
 
-import com.colak.springfeignclienttutorial.feignclient.errordecoder.FeignClientDecoder;
+import com.colak.springfeignclienttutorial.internaldemo.feignclient.errordecoder.FeignClientDecoder;
 import feign.codec.ErrorDecoder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

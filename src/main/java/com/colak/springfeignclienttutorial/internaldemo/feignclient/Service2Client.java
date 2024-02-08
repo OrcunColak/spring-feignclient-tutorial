@@ -1,4 +1,4 @@
-package com.colak.springfeignclienttutorial.feignclient;
+package com.colak.springfeignclienttutorial.internaldemo.feignclient;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;

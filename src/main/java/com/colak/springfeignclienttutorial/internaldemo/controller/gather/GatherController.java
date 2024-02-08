@@ -1,7 +1,7 @@
 package com.colak.springfeignclienttutorial.internaldemo.controller.gather;
 
-import com.colak.springfeignclienttutorial.feignclient.Service1Client;
-import com.colak.springfeignclienttutorial.feignclient.Service1Response;
+import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service1Client;
+import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service1Response;
 import com.colak.springfeignclienttutorial.internaldemo.service.GatherService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
