@@ -1,4 +1,4 @@
-package com.colak.springfeignclienttutorial.internaldemo.controller.quoteservice2;
+package com.colak.springfeignclienttutorial.quote.controller;
 
 import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service1Response;
 import org.springframework.web.bind.annotation.GetMapping;

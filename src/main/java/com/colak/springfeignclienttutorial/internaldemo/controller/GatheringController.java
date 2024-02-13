@@ -1,4 +1,4 @@
-package com.colak.springfeignclienttutorial.internaldemo.controller.gather;
+package com.colak.springfeignclienttutorial.internaldemo.controller;
 
 import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service1Client;
 import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service1Response;
@@ -15,7 +15,7 @@ import java.net.URISyntaxException;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping(path = "/api/gather")
-public class GatherController {
+public class GatheringController {
 
     private final GatherService gatherService;
 

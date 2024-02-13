@@ -1,4 +1,4 @@
-package com.colak.springfeignclienttutorial.internaldemo.controller.quoteservice1;
+package com.colak.springfeignclienttutorial.quote.controller;
 
 import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service1Response;
 import org.springframework.http.ResponseEntity;

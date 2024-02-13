@@ -1,4 +1,4 @@
-package com.colak.springfeignclienttutorial.internaldemo.controller.gather;
+package com.colak.springfeignclienttutorial.internaldemo.controller;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 // Run on default port 8080
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-class GatherControllerTest {
+class GatheringControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
