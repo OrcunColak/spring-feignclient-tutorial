@@ -1,7 +1,7 @@
 package com.colak.springfeignclienttutorial.internaldemo.controller;
 
 import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service1Client;
-import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service1Response;
+import com.colak.springfeignclienttutorial.quote.controller.QuoteResponse;
 import com.colak.springfeignclienttutorial.internaldemo.service.GatherService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -30,9 +30,9 @@ public class GatheringController {
     // http://localhost:8080/api/gather/getService1Quote/1
     @GetMapping(path = "getService1Quote/{id}")
     public String getService1Quote(@PathVariable("id") int id) {
-        ResponseEntity<Service1Response> response = service1Client.getQuote(id);
-        Service1Response service1Response = response.getBody();
-        assert service1Response != null;
-        return service1Response.getMsg();
+        ResponseEntity<QuoteResponse> response = service1Client.getQuote(id);
+        QuoteResponse quoteResponse = response.getBody();
+        assert quoteResponse != null;
+        return quoteResponse.getMsg();
     }
 }

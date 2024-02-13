@@ -1,6 +1,5 @@
 package com.colak.springfeignclienttutorial.quote.controller;
 
-import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service1Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,14 +12,18 @@ public class QuoteService1Controller {
 
     // http://localhost:8080/actuator/health
     // http://localhost:8080/api/service1/getQuote/2
+
+    /**
+     * This controller may throw exception
+     */
     @GetMapping(path = "getQuote/{id}")
-    public ResponseEntity<Service1Response> getQuote (@PathVariable("id") int id) {
+    public ResponseEntity<QuoteResponse> getQuote(@PathVariable("id") int id) {
         if (id == 2) {
             return ResponseEntity.badRequest().build();
         }
         String message = "Quote 1 : " + id;
-        Service1Response service1Response = new Service1Response();
-        service1Response.setMsg(message);
-        return ResponseEntity.ok(service1Response);
+        QuoteResponse quoteResponse = new QuoteResponse();
+        quoteResponse.setMsg(message);
+        return ResponseEntity.ok(quoteResponse);
     }
 }

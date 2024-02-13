@@ -1,5 +1,6 @@
 package com.colak.springfeignclienttutorial.internaldemo.feignclient;
 
+import com.colak.springfeignclienttutorial.quote.controller.QuoteResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,5 +12,5 @@ import java.net.URI;
 public interface Service2Client {
 
     @GetMapping( path = "/getQuote/{id}" , produces = "application/json")
-    ResponseEntity<Service1Response> getQuote(URI baseUrl,@PathVariable("id") int id);
+    ResponseEntity<QuoteResponse> getQuote(URI baseUrl, @PathVariable("id") int id);
 }

@@ -2,7 +2,7 @@ package com.colak.springfeignclienttutorial.internaldemo.service.impl;
 
 import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service1Client;
 import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service2Client;
-import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service1Response;
+import com.colak.springfeignclienttutorial.quote.controller.QuoteResponse;
 import com.colak.springfeignclienttutorial.internaldemo.service.GatherService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,24 +19,24 @@ public class GatherServiceImpl implements GatherService {
 
     @Override
     public String gather(int id) {
-        Service1Response service1Response1 = getService1Response(id);
-        assert service1Response1 != null;
+        QuoteResponse quote = getService1Response(id);
+        assert quote != null;
 
-        Service1Response service1Response2 = getService2Response();
-        assert service1Response2 != null;
+        QuoteResponse quoteResponse2 = getService2Response();
+        assert quoteResponse2 != null;
 
-        return service1Response1.getMsg() + " " + service1Response2.getMsg();
+        return quote.getMsg() + " " + quoteResponse2.getMsg();
     }
 
 
-    private Service1Response getService1Response(int id) {
-        ResponseEntity<Service1Response> response1 = service1Client.getQuote(id);
+    private QuoteResponse getService1Response(int id) {
+        ResponseEntity<QuoteResponse> response1 = service1Client.getQuote(id);
         return response1.getBody();
     }
 
-    private Service1Response getService2Response() {
+    private QuoteResponse getService2Response() {
         URI baseUrl = URI.create("http://localhost:8080/api/service2");
-        ResponseEntity<Service1Response> response2 = service2Client.getQuote(baseUrl, 2);
+        ResponseEntity<QuoteResponse> response2 = service2Client.getQuote(baseUrl, 2);
         return response2.getBody();
     }
 }
