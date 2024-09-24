@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class QuoteService1Controller {
 
     // http://localhost:8080/actuator/health
+    // http://localhost:8080/api/service1/getQuote/1
     // http://localhost:8080/api/service1/getQuote/2
 
     /**
