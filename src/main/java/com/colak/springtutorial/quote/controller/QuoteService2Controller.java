@@ -1,4 +1,4 @@
-package com.colak.springfeignclienttutorial.quote.controller;
+package com.colak.springtutorial.quote.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

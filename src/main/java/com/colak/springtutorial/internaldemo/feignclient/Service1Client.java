@@ -1,6 +1,6 @@
-package com.colak.springfeignclienttutorial.internaldemo.feignclient;
+package com.colak.springtutorial.internaldemo.feignclient;
 
-import com.colak.springfeignclienttutorial.quote.controller.QuoteResponse;
+import com.colak.springtutorial.quote.controller.QuoteResponse;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;
 import org.springframework.cloud.openfeign.FeignClient;

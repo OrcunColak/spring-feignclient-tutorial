@@ -1,4 +1,4 @@
-package com.colak.springfeignclienttutorial.quote.controller;
+package com.colak.springtutorial.quote.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

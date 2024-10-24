@@ -1,9 +1,9 @@
-package com.colak.springfeignclienttutorial.internaldemo.service.impl;
+package com.colak.springtutorial.internaldemo.service.impl;
 
-import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service1Client;
-import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service2Client;
-import com.colak.springfeignclienttutorial.quote.controller.QuoteResponse;
-import com.colak.springfeignclienttutorial.internaldemo.service.GatherService;
+import com.colak.springtutorial.internaldemo.feignclient.Service1Client;
+import com.colak.springtutorial.internaldemo.feignclient.Service2Client;
+import com.colak.springtutorial.quote.controller.QuoteResponse;
+import com.colak.springtutorial.internaldemo.service.GatherService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

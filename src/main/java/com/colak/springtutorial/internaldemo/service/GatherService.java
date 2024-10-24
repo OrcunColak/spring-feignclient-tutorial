@@ -1,4 +1,4 @@
-package com.colak.springfeignclienttutorial.internaldemo.service;
+package com.colak.springtutorial.internaldemo.service;
 
 import java.net.URISyntaxException;
 

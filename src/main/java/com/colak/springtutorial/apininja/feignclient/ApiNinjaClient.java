@@ -1,4 +1,4 @@
-package com.colak.springfeignclienttutorial.apininja.feignclient;
+package com.colak.springtutorial.apininja.feignclient;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

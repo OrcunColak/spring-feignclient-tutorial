@@ -1,8 +1,8 @@
-package com.colak.springfeignclienttutorial.internaldemo.controller;
+package com.colak.springtutorial.internaldemo.controller;
 
-import com.colak.springfeignclienttutorial.internaldemo.feignclient.Service1Client;
-import com.colak.springfeignclienttutorial.quote.controller.QuoteResponse;
-import com.colak.springfeignclienttutorial.internaldemo.service.GatherService;
+import com.colak.springtutorial.internaldemo.feignclient.Service1Client;
+import com.colak.springtutorial.quote.controller.QuoteResponse;
+import com.colak.springtutorial.internaldemo.service.GatherService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

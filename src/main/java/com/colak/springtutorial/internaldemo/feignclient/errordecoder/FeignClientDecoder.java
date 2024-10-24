@@ -1,4 +1,4 @@
-package com.colak.springfeignclienttutorial.internaldemo.feignclient.errordecoder;
+package com.colak.springtutorial.internaldemo.feignclient.errordecoder;
 
 import feign.Response;
 import feign.codec.ErrorDecoder;

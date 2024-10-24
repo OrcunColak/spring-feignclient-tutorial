@@ -1,4 +1,4 @@
-package com.colak.springfeignclienttutorial.quote.controller;
+package com.colak.springtutorial.quote.controller;
 
 import lombok.Getter;
 import lombok.Setter;
